@@ -3,6 +3,8 @@ import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class BudgetService {
     private final BudgetRepo budgetRepo;
 
@@ -33,7 +35,8 @@ public class BudgetService {
             YearMonth budgetYearMonth = YearMonth.parse(budgets.get(i).yearMonth, DateTimeFormatter.ofPattern("yyyyMM"));
             if (startYearMonth.equals(budgetYearMonth) || endYearMonth.equals(budgetYearMonth) || (startYearMonth.isBefore(budgetYearMonth) && endYearMonth.isAfter(budgetYearMonth))) {
                 int i1 = budgetYearMonth.lengthOfMonth();
-                budget += (double) budgets.get(i).amount / i1;
+                budget += (double) budgets.get(i).amount / i1 * (DAYS.between(startDate, endDate) + 1);
+
 //                LocalDate lastDay = budgetYearMonth.atEndOfMonth();
             }
         }
