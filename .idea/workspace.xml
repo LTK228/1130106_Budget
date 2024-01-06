@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="first">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BudgetService.java" afterDir="false" />
+    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="date is invalid">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Budget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BudgetRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FakeBudgetRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BudgetService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BudgetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BudgetTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +111,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704528979087</updated>
-      <workItem from="1704528980140" duration="553000" />
+      <workItem from="1704528980140" duration="3547000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -118,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704529225550</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="date is invalid">
+      <option name="closed" value="true" />
+      <created>1704529730998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704529730998</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first" />
-    <option name="LAST_COMMIT_MESSAGE" value="first" />
+    <MESSAGE value="date is invalid" />
+    <option name="LAST_COMMIT_MESSAGE" value="date is invalid" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -135,6 +147,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>14</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/BudgetTests.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
