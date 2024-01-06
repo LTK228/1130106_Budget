@@ -52,6 +52,14 @@ public class BudgetTests {
         endDate = LocalDate.of(2024, 1, 31);
         totalAmountShouldBe(startDate, endDate, 310);
     }
+    @Test
+    void crossMonth() {
+        fakeBudgetRepo.setBudgets(List.of(new Budget("202401", 310), new Budget("202402", 2900)));
+        LocalDate startDate, endDate;
+        startDate = LocalDate.of(2024, 1, 18);
+        endDate = LocalDate.of(2024, 2, 5);
+        totalAmountShouldBe(startDate, endDate, 640);
+    }
 
     private void totalAmountShouldBe(LocalDate startDate, LocalDate endDate, double expected) {
         assertEquals(expected, budgetService.query(startDate, endDate));
