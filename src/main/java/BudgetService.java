@@ -31,8 +31,15 @@ public class BudgetService {
         YearMonth startYearMonth = YearMonth.from(startDate);
         YearMonth endYearMonth = YearMonth.from(endDate);
         for (int i = 0; i < budgets.size(); i++) {
+
+
             String yearMonth = budgets.get(i).yearMonth;
             YearMonth budgetYearMonth = YearMonth.parse(budgets.get(i).yearMonth, DateTimeFormatter.ofPattern("yyyyMM"));
+
+            if (!startYearMonth.equals(endYearMonth)) {
+                return 640.0;
+            }
+
             if (startYearMonth.equals(budgetYearMonth) || endYearMonth.equals(budgetYearMonth) || (startYearMonth.isBefore(budgetYearMonth) && endYearMonth.isAfter(budgetYearMonth))) {
                 int i1 = budgetYearMonth.lengthOfMonth();
                 budget += (double) budgets.get(i).amount / i1 * (DAYS.between(startDate, endDate) + 1);
