@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="[fix] crossMonth">
-      <change afterPath="$PROJECT_DIR$/src/main/java/budget/Period.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Budget.java" afterDir="false" />
+    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="[refactor] introduce parameter object of Period">
       <change beforePath="$PROJECT_DIR$/src/main/java/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BudgetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BudgetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BudgetTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704528979087</updated>
-      <workItem from="1704528980140" duration="9199000" />
+      <workItem from="1704528980140" duration="9521000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -181,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704606588583</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[refactor] introduce parameter object of Period">
+      <option name="closed" value="true" />
+      <created>1704607317854</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704607317854</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +201,8 @@
     <MESSAGE value="[test] crossMonth" />
     <MESSAGE value="[feat] crossMonth" />
     <MESSAGE value="[fix] crossMonth" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] crossMonth" />
+    <MESSAGE value="[refactor] introduce parameter object of Period" />
+    <option name="LAST_COMMIT_MESSAGE" value="[refactor] introduce parameter object of Period" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
