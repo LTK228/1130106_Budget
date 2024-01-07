@@ -15,6 +15,10 @@ public class BudgetService {
         this.budgetRepo = budgetRepo;
     }
 
+    private static double getDailyBudget(int budgetOfMonth, int daysOfMonth) {
+        return (double) budgetOfMonth / daysOfMonth;
+    }
+
     public Double query(LocalDate startDate, LocalDate endDate) {
         List<Budget> budgets = budgetRepo.getAll();
 
@@ -42,17 +46,15 @@ public class BudgetService {
                     budget += (double) budgets.get(i).amount;
                 } else if (startYearMonth.equals(budgetYearMonth)) {
                     LocalDate lastDay = budgetYearMonth.atEndOfMonth();
-                    int i1 = budgetYearMonth.lengthOfMonth();
-                    budget += (double) budgets.get(i).amount / i1 * (DAYS.between(startDate, lastDay) + 1);
+                    budget += budgets.get(i).dailyBudget() * (DAYS.between(startDate, lastDay) + 1);
                 } else {
-                    int i1 = budgetYearMonth.lengthOfMonth();
                     LocalDate firstDay = budgetYearMonth.atDay(1);
-                    budget += (double) budgets.get(i).amount / i1 * (DAYS.between(firstDay, endDate) + 1);
+                    budget += budgets.get(i).dailyBudget() * (DAYS.between(firstDay, endDate) + 1);
                 }
 
             } else if (startYearMonth.equals(budgetYearMonth) || endYearMonth.equals(budgetYearMonth) || (startYearMonth.isBefore(budgetYearMonth) && endYearMonth.isAfter(budgetYearMonth))) {
-                int i1 = budgetYearMonth.lengthOfMonth();
-                budget += (double) budgets.get(i).amount / i1 * (DAYS.between(startDate, endDate) + 1);
+                double dailyBudget = budgets.get(i).dailyBudget();
+                budget += dailyBudget * (DAYS.between(startDate, endDate) + 1);
             }
         }
 
