@@ -21,21 +21,20 @@ public class BudgetService {
         if (new Period(startDate, endDate).invalidPeriod()) {
             return 0.0;
         }
-        return getBudget(budgets, startDate, endDate);
 
-
+        return getBudget(budgets, new Period(startDate, endDate));
     }
 
-    private Double getBudget(List<Budget> budgets, LocalDate startDate, LocalDate endDate) {
+    private Double getBudget(List<Budget> budgets, Period period) {
         Double budget = 0.0;
+        LocalDate startDate = period.startDate();
+        LocalDate endDate = period.endDate();
 
 
         YearMonth startYearMonth = YearMonth.from(startDate);
         YearMonth endYearMonth = YearMonth.from(endDate);
         for (int i = 0; i < budgets.size(); i++) {
 
-
-            String yearMonth = budgets.get(i).yearMonth;
             YearMonth budgetYearMonth = YearMonth.parse(budgets.get(i).yearMonth, DateTimeFormatter.ofPattern("yyyyMM"));
 
             if (!startYearMonth.equals(endYearMonth)) {
