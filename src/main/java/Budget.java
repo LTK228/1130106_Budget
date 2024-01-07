@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 
@@ -11,6 +12,12 @@ public class Budget {
         this.yearMonth = yearMonth;
         this.amount = amount;
     }
+
+    LocalDate getFirstDay() {
+        LocalDate firstDay = YearMonth.parse(this.yearMonth, DateTimeFormatter.ofPattern("yyyyMM")).atDay(1);
+        return firstDay;
+    }
+
     private int daysOfMonth() {
         YearMonth budgetYearMonth = YearMonth.parse(this.yearMonth, DateTimeFormatter.ofPattern("yyyyMM"));
         return budgetYearMonth.lengthOfMonth();

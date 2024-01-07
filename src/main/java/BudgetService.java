@@ -48,7 +48,7 @@ public class BudgetService {
                     LocalDate lastDay = budgetYearMonth.atEndOfMonth();
                     budget += budgets.get(i).dailyBudget() * (DAYS.between(startDate, lastDay) + 1);
                 } else {
-                    LocalDate firstDay = budgetYearMonth.atDay(1);
+                    LocalDate firstDay = budgets.get(i).getFirstDay();
                     budget += budgets.get(i).dailyBudget() * (DAYS.between(firstDay, endDate) + 1);
                 }
 
@@ -60,4 +60,5 @@ public class BudgetService {
 
         return budget;
     }
+
 }
