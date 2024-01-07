@@ -1,4 +1,5 @@
 public class Budget {
+
     public final String yearMonth;
     public final int amount;
 

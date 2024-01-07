@@ -1,3 +1,5 @@
+import budget.Period;
+
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
@@ -16,12 +18,12 @@ public class BudgetService {
     public Double query(LocalDate startDate, LocalDate endDate) {
         List<Budget> budgets = budgetRepo.getAll();
 
-        if (!startDate.isAfter(endDate)) {
-            return getBudget(budgets, startDate, endDate);
+        if (new Period(startDate, endDate).invalidPeriod()) {
+            return 0.0;
         }
+        return getBudget(budgets, startDate, endDate);
 
 
-        return 0.0;
     }
 
     private Double getBudget(List<Budget> budgets, LocalDate startDate, LocalDate endDate) {

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="[feat] crossMonth">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="58633be3-3bd3-40bb-8dd8-ca9c2e5c85e3" name="Changes" comment="[fix] crossMonth">
+      <change afterPath="$PROJECT_DIR$/src/main/java/budget/Period.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Budget.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Budget.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BudgetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BudgetTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BudgetTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
@@ -42,7 +49,7 @@
     "Gradle.BudgetTests.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "refactor",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -108,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1704528979087</updated>
-      <workItem from="1704528980140" duration="8490000" />
+      <workItem from="1704528980140" duration="9199000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <option name="closed" value="true" />
@@ -166,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704533343771</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[fix] crossMonth">
+      <option name="closed" value="true" />
+      <created>1704606588583</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704606588583</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,10 +193,10 @@
     <MESSAGE value="no budge &amp;&amp; same date" />
     <MESSAGE value="[test] allMonth" />
     <MESSAGE value="[feat] allMonth" />
-    <MESSAGE value="[fix] crossMonth" />
     <MESSAGE value="[test] crossMonth" />
     <MESSAGE value="[feat] crossMonth" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] crossMonth" />
+    <MESSAGE value="[fix] crossMonth" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] crossMonth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,16 +205,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>14</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/BudgetTests.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/BudgetService.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -18,7 +18,7 @@ public class BudgetTests {
     }
 
     @Test
-    void dateIsInValid() {
+    void dateIsInvalid() {
         LocalDate startDate, endDate;
         fakeBudgetRepo.setBudgets(List.of());
         startDate = LocalDate.of(2024, 1, 10);
